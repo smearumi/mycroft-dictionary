@@ -9,7 +9,7 @@ You should be able to install this skill via `mycroft-msm install https://github
 
 ## Configuration
 At first, you must obtain your API credentials from "Oxford Dictionaries".
-Please sign up/login into https://developer.oxforddictionaries.com/ and get your API key credentials.(i.e. Application ID, Application Key)
+Please sign up/login into https://developer.oxforddictionaries.com/ and get your API key credentials. (i.e. Application ID, Application Key)
 
 You can configure this skill via web interface (home.mycroft.ai). After a few minutes of having the skill installed, you should see configuration options in the https://home.mycroft.ai/#/skill location.
 
