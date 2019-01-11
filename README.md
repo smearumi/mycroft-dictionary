@@ -2,7 +2,7 @@
 Find out the definition/meaning of a specific word from dictionary.
 
 ## About 
-Find out the definition/meaning of a specific word from dictionary using Oxford Dictionaries API.
+You can find out the definition/meaning of a specific word from dictionary using Oxford Dictionaries API.
 
 ## Installation
 You should be able to install this skill via `mycroft-msm install https://github.com/smearumi/mycroft-dictionary.git` or you can install this skill via Installer Skill from web interface (https://home.mycroft.ai/#/skill).
