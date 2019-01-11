@@ -31,17 +31,17 @@ class DictionarySkill(MycroftSkill):
 
             if not config == {}:
                 base_url = str(config.get("base_url"))
+                language = str(config.get("language"))
                 app_id = str(config.get("app_id"))
                 app_key = str(config.get("app_key"))
-                language = str(config.get("language"))
 
             else:
                 base_url = str(self.settings.get("base_url"))
+                language = str(self.settings.get("language"))
                 app_id = str(self.settings.get("app_id"))
                 app_key = str(self.settings.get("app_key"))
-                language = str(self.settings.get("language"))
 
-            if not base_url or not app_id or not app_key or not language:
+            if not base_url or not language or not app_id or not app_key:
                 raise Exception("None found.")
 
         except Exception as e:

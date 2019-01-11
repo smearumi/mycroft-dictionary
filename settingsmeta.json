@@ -11,13 +11,20 @@
                     [
                         {
                             "type": "label",
-                            "label": "Find out the definition/meaning of a specific word from dictionary using 'Oxford Dictionaries API'."
+                            "label": "Find out the definition/meaning of a specific word from dictionary using 'Oxford Dictionaries API'. Please get your API key credentials (i.e. Application ID, Application key) from https://developer.oxforddictionaries.com/"
                         },
                         {
                             "name": "base_url",
                             "type": "text",
                             "label": "Base URL:",
                             "value": "https://od-api.oxforddictionaries.com:443/api/v1"
+                        },
+                        {
+                            "name": "language",
+                            "type": "select",
+                            "label": "Language:",
+                            "options": "English|en",
+                            "value": "en"
                         },
                         {
                             "name": "app_id",
@@ -30,13 +37,6 @@
                             "type": "password",
                             "label": "App Key:",
                             "value": ""
-                        },
-                        {
-                            "name": "language",
-                            "type": "select",
-                            "label": "Language:",
-                            "options": "English|en",
-                            "value": "en"
                         }
                     ]
                 }
