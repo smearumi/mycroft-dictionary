@@ -41,8 +41,6 @@ class DictionarySkill(MycroftSkill):
                 app_key = str(self.settings.get("app_key"))
                 language = str(self.settings.get("language"))
 
-            self.log.error("app_key: {0}".format(app_key))
-
             if not base_url or not app_id or not app_key or not language:
                 raise Exception("None found.")
 
@@ -52,8 +50,6 @@ class DictionarySkill(MycroftSkill):
             return
 
         word = message.data.get("Word")
-
-        self.log.error("Word: {0}".format(word))
 
         if not word:
             return
@@ -74,7 +70,8 @@ class DictionarySkill(MycroftSkill):
                                                     'entries'][0]['senses'][0][
                                                         'definitions'][0]
 
-                self.speak_dialog("definition", {"definition": definition})
+                self.speak_dialog("definition",
+                                  {"word": word, "definition": definition})
 
             elif response.status_code == 404:
                 self.speak_dialog("invalid", {"word": word})
