@@ -11,7 +11,7 @@
                     [
                         {
                             "type": "label",
-                            "label": "Oxford Dictionaries"
+                            "label": "Find out the definition/meaning of a specific word from dictionary using 'Oxford Dictionaries API'."
                         },
                         {
                             "name": "base_url",
@@ -21,13 +21,13 @@
                         },
                         {
                             "name": "app_id",
-                            "type": "text",
+                            "type": "password",
                             "label": "App ID:",
                             "value": ""
                         },
                         {
                             "name": "app_key",
-                            "type": "text",
+                            "type": "password",
                             "label": "App Key:",
                             "value": ""
                         },
