@@ -1,0 +1,45 @@
+{
+    "name": "Dictionary Skill",
+    "color": "#22a7f0",
+    "skillMetadata":
+        {
+           "sections":
+            [
+                {
+                   "name": "Configuration",
+                   "fields":
+                    [
+                        {
+                            "type": "label",
+                            "label": "Oxford Dictionaries"
+                        },
+                        {
+                            "name": "base_url",
+                            "type": "text",
+                            "label": "Base URL:",
+                            "value": "https://od-api.oxforddictionaries.com:443/api/v1"
+                        },
+                        {
+                            "name": "app_id",
+                            "type": "text",
+                            "label": "App ID:",
+                            "value": ""
+                        },
+                        {
+                            "name": "app_key",
+                            "type": "text",
+                            "label": "App Key:",
+                            "value": ""
+                        },
+                        {
+                            "name": "language",
+                            "type": "select",
+                            "label": "Language:",
+                            "options": "English|en",
+                            "value": "en"
+                        }
+                    ]
+                }
+            ]
+        }
+}

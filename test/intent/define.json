@@ -1,0 +1,9 @@
+{
+  "utterance": "define cat",
+  "intent_type": "DefineIntent",
+  "intent": {
+    "Define": "define",
+    "Word": "cat"
+  },
+  "expected_dialog": "definition"
+}
