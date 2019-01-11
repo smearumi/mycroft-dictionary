@@ -1,1 +1,1 @@
-(define|the|word) (?P<Word>.*)
+(define|the) (?P<Word>.*)
