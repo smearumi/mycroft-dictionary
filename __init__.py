@@ -64,7 +64,13 @@ class DictionarySkill(MycroftSkill):
         try:
             response = requests.get(api_url, headers=api_headers)
 
-            if response.status_code == 200:
+        except Exception as e:
+            self.speak_dialog("connection.error")
+            self.log.error(e)
+            return
+
+        if response.status_code == 200:
+            try:
                 definition = response.json()['results'][0][
                                                 'lexicalEntries'][0][
                                                     'entries'][0]['senses'][0][
@@ -73,13 +79,18 @@ class DictionarySkill(MycroftSkill):
                 self.speak_dialog("definition",
                                   {"word": word, "definition": definition})
 
-            elif response.status_code == 404:
-                self.speak_dialog("invalid", {"word": word})
+            except KeyError:
+                definition = response.json()['results'][0][
+                                                'lexicalEntries'][0][
+                                                    'entries'][0]['senses'][0][
+                                                        'crossReferenceMarkers'
+                                                                           ][0]
 
-        except Exception as e:
-            self.speak_dialog("connection.error")
-            self.log.error(e)
-            return
+                self.speak_dialog("grammer",
+                                  {"word": word, "definition": definition})
+
+        elif response.status_code == 404:
+            self.speak_dialog("invalid", {"word": word})
 
     def stop(self):
         pass
