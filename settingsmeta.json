@@ -16,7 +16,7 @@
                         {
                             "name": "base_url",
                             "type": "text",
-                            "label": "Base URL:",
+                            "label": "Base API URL:",
                             "value": "https://od-api.oxforddictionaries.com:443/api/v1"
                         },
                         {
