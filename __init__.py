@@ -27,16 +27,16 @@ class DictionarySkill(MycroftSkill):
                     .require("Word"))
     def handle_define_intent(self, message):
         try:
+            base_url = "https://od-api.oxforddictionaries.com:443/api/v2"
+
             config = self.config_core.get("DictionarySkill", {})
 
             if not config == {}:
-                base_url = str(config.get("base_url"))
                 language = str(config.get("language"))
                 app_id = str(config.get("app_id"))
                 app_key = str(config.get("app_key"))
 
             else:
-                base_url = str(self.settings.get("base_url"))
                 language = str(self.settings.get("language"))
                 app_id = str(self.settings.get("app_id"))
                 app_key = str(self.settings.get("app_key"))
@@ -44,9 +44,8 @@ class DictionarySkill(MycroftSkill):
             if not base_url or not language or not app_id or not app_key:
                 raise Exception("None found.")
 
-        except Exception as e:
+        except Exception:
             self.speak_dialog("settings.error")
-            self.log.error(e)
             return
 
         word = message.data.get("Word")
@@ -64,9 +63,8 @@ class DictionarySkill(MycroftSkill):
         try:
             response = requests.get(api_url, headers=api_headers)
 
-        except Exception as e:
+        except Exception:
             self.speak_dialog("connection.error")
-            self.log.error(e)
             return
 
         if response.status_code == 200:
