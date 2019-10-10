@@ -24,7 +24,7 @@ If you desire total privacy, please edit your config file located at:
 If it does not exist, create it. This file must be contain a valid json, add the following to it:
 
         "DictionarySkill": {
-            "language": "en",
+            "language": "en-gb",
             "app_id": "YOUR APPLICATION ID",
             "app_key": "YOUR APPLICATION KEY"
         }  
